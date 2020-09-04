@@ -21,12 +21,7 @@ seconds = totalSeconds % 60
 tempMinutes = totalMinutes + math.floor(totalSeconds/60)
 minutes = tempMinutes % 60
 hours = math.floor(tempMinutes/60)
-
-if len(str(minutes)) != 2:
-    minutes = '0' + str(minutes)
-if len(str(seconds)) != 2:
-    seconds = '0' + str(seconds)
     
-print(f'Album length: {hours}:{minutes}:{seconds}')
+print(f'Album length: {}:{:02d}:{:02d}'.format(hours, minutes, seconds))
 
 file.close()
